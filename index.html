@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K1 Customs Banglore | Founded by Jaffar Bhai | Premier Car Modification Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#090a0f',
+                            dark: '#12151c',
+                            card: '#1a1f2c',
+                            border: '#2a324a',
+                            red: '#ff1e38',
+                            redDark: '#cc152d',
+                            blue: '#00f0ff',
+                            blueGlow: 'rgba(0, 240, 255, 0.25)',
+                            redGlow: 'rgba(255, 30, 56, 0.25)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cyber-glow-red {
+            box-shadow: 0 0 25px rgba(255, 30, 56, 0.4);
+        }
+        .cyber-glow-blue {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
+        }
+        .glass-nav {
+            background: rgba(9, 10, 15, 0.85);
+            backdrop-filter: blur(16px);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090a0f;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff1e38;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cc152d;
+        }
+    </style>
+</head>
+<body class="bg-cyber-black text-gray-100 font-sans antialiased selection:bg-cyber-red selection:text-white">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-cyber-border transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-cyber-red to-cyber-redDark flex items-center justify-center text-white shadow-lg cyber-glow-red group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-gauge-high text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-black tracking-wider text-white">K1 <span class="text-cyber-red">CUSTOMS</span></span>
+                        <span class="block text-[10px] tracking-widest text-cyber-blue uppercase font-bold">Banglore Studio</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium text-gray-300 hover:text-cyber-blue transition-colors py-2 border-b-2 border-transparent hover:border-cyber-blue">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium text-gray-300 hover:text-cyber-blue transition-colors py-2 border-b-2 border-transparent hover:border-cyber-blue">About Us</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-gray-300 hover:text-cyber-blue transition-colors py-2 border-b-2 border-transparent hover:border-cyber-blue">Modifications & Price</a>
+                    <a href="#gallery" class="nav-link text-sm font-medium text-gray-300 hover:text-cyber-blue transition-colors py-2 border-b-2 border-transparent hover:border-cyber-blue">Gallery</a>
+                    <a href="#contact" class="nav-link text-sm font-medium text-gray-300 hover:text-cyber-blue transition-colors py-2 border-b-2 border-transparent hover:border-cyber-blue">Book Banglore Slot</a>
+                </nav>
+
+                <!-- Action CTA & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all shadow-md">
+                        <span>Get Quote (₹)</span>
+                        <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-200 hover:text-cyber-blue p-2 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cyber-card border-b border-cyber-border px-4 pt-3 pb-6 space-y-3 shadow-2xl">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-cyber-dark hover:text-cyber-blue">Home</a>
+            <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-cyber-dark hover:text-cyber-blue">About Us</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-cyber-dark hover:text-cyber-blue">Modifications & Price</a>
+            <a href="#gallery" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-cyber-dark hover:text-cyber-blue">Gallery</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-gray-200 hover:bg-cyber-dark hover:text-cyber-blue">Book Banglore Slot</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="min-h-screen pt-28 pb-16 flex items-center relative overflow-hidden bg-cyber-black">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80" alt="Supercar Tuning Banglore" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyber-black via-cyber-black/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-cyber-black via-transparent to-cyber-black/60"></div>
+        </div>
+
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-cyber-red/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-cyber-blue/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-cyber-card border border-cyber-border text-cyber-blue text-xs font-bold tracking-wider uppercase">
+                        <i class="fa-solid fa-crown text-cyber-red"></i>
+                        <span>Proprietor & Master Builder: Jaffar Bhai</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-none">
+                        Banglore's Premier <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyber-red via-rose-500 to-cyber-blue">Car Customization</span> Studio
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0">
+                        Handcrafted automotive excellence led by Jaffar Bhai. Unleash raw power and exotic aesthetics with forged wheels, valvetronic exhausts, aggressive aero, and bespoke stealth wraps right here in Namma Bengaluru.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#services" class="w-full sm:w-auto px-8 py-4 rounded-full bg-cyber-red hover:bg-cyber-redDark text-white font-bold cyber-glow-red text-center transition-all flex items-center justify-center space-x-2">
+                            <span>Explore Mods & Prices</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full bg-cyber-card hover:bg-cyber-dark text-gray-200 border border-cyber-border font-bold text-center transition-all cyber-glow-blue">
+                            Book Dyno Slot
+                        </a>
+                    </div>
+                    
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-cyber-border max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-cyber-blue">1,200+</p>
+                            <p class="text-xs text-gray-400 font-medium">Cars Upgraded</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-cyber-red">AWD</p>
+                            <p class="text-xs text-gray-400 font-medium">Dyno Tuned</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-black text-cyber-blue">4.9★</p>
+                            <p class="text-xs text-gray-400 font-medium">Banglore Rating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-cyber-red to-cyber-blue rounded-3xl transform rotate-2 scale-105 opacity-30 blur-sm"></div>
+                        <div class="relative bg-cyber-card/95 backdrop-blur-md p-6 sm:p-8 rounded-3xl shadow-2xl border border-cyber-border space-y-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-cyber-red/20 text-cyber-red flex items-center justify-center text-xl border border-cyber-red/30">
+                                        <i class="fa-solid fa-fire-flame-curved"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-white">Live Banglore Build</h3>
+                                        <p class="text-xs text-cyber-blue font-mono">Curated by Jaffar Bhai</p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full bg-cyber-red/20 text-cyber-red border border-cyber-red/30 text-xs font-bold animate-pulse">Dyno Active</span>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden shadow-inner border border-cyber-border">
+                                <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=600&q=80" alt="Modified BMW M3" class="w-full h-52 object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between text-xs font-semibold text-gray-300">
+                                    <span>Titanium Exhaust & ECU Remap</span>
+                                    <span class="text-cyber-blue font-mono">+145 BHP</span>
+                                </div>
+                                <div class="w-full bg-cyber-dark h-2 rounded-full overflow-hidden border border-cyber-border">
+                                    <div class="bg-gradient-to-r from-cyber-red to-cyber-blue h-2 rounded-full w-full"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="py-24 bg-cyber-dark relative border-t border-cyber-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-3.5 py-1.5 rounded-full bg-cyber-red/20 text-cyber-red border border-cyber-red/30 text-xs font-bold uppercase tracking-widest">About K1 Customs Banglore</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">Engineered for Karnataka's Petrolheads</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Founded and steered by <strong>Jaffar Bhai</strong>, K1 Customs Banglore delivers precision fabrication, track-tested ECU calibration, and exotic styling backed by over a decade of personal expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cyber-card p-8 rounded-3xl border border-cyber-border hover:border-cyber-red transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-cyber-dark shadow-inner flex items-center justify-center text-cyber-red text-2xl mb-6 group-hover:scale-110 transition-transform border border-cyber-border">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">In-House AWD Dyno</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">State-of-the-art dynamometer tuning facility in Banglore to calibrate air-fuel ratios safely and extract maximum wheel horsepower.</p>
+                </div>
+                <div class="bg-cyber-card p-8 rounded-3xl border border-cyber-border hover:border-cyber-blue transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-cyber-dark shadow-inner flex items-center justify-center text-cyber-blue text-2xl mb-6 group-hover:scale-110 transition-transform border border-cyber-border">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Genuine Imported Parts</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Direct partnerships with Akrapovič, BBS, Vorsteiner, and Armytrix to guarantee 100% authentic performance parts with warranty.</p>
+                </div>
+                <div class="bg-cyber-card p-8 rounded-3xl border border-cyber-border hover:border-cyber-red transition-all group shadow-xl">
+                    <div class="w-14 h-14 rounded-2xl bg-cyber-dark shadow-inner flex items-center justify-center text-cyber-red text-2xl mb-6 group-hover:scale-110 transition-transform border border-cyber-border">
+                        <i class="fa-solid fa-user-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Jaffar Bhai's Crew</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Directly trained by Jaffar Bhai, our Banglore workshop specialists bring 12+ years of hands-on mastery customizing supercars and German luxury builds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Modifications & Services Section -->
+    <section id="services" class="py-24 bg-cyber-black relative border-t border-cyber-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-3.5 py-1.5 rounded-full bg-cyber-blue/20 text-cyber-blue border border-cyber-blue/30 text-xs font-bold uppercase tracking-widest">Modifications & Banglore Pricing</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">Elite Upgrade Packages</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Select your preferred upgrade or choose individual parts. Transparent pricing inclusive of professional fitting in Banglore.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-red transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?auto=format&fit=crop&w=600&q=80" alt="Alloy Wheels" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Forged Alloy Wheels & Stance</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Flow-formed and monoblock forged wheels custom-offset for aggressive stance, reduced weight, and superior grip.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹1,45,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('Forged Alloy Wheels & Stance', 145000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-blue transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=600&q=80" alt="Custom Paint and PPF" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Custom Paint & Color PPF</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Matte stealth wraps, color-shift metallic paint, and self-healing paint protection films to shield against Banglore traffic.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹2,80,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('Custom Paint & Color PPF', 280000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-red transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&w=600&q=80" alt="Valvetronic Exhaust" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Valvetronic Exhaust Systems</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Remote-controlled valved titanium and stainless exhaust systems delivering thunderous roars and deep crackles on command.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹1,75,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('Valvetronic Exhaust Systems', 175000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-blue transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=600&q=80" alt="Carbon Splitters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Carbon Fiber Splitters & Aero</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Autoclaved carbon fiber front splitters, side skirts, rear diffusers, and GT wings for elite track downforce and aesthetics.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹95,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('Carbon Fiber Splitters & Aero', 95000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-red transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" alt="ECU Remap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">ECU Remapping & Dyno Tuning</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Stage 1, 2, and 3 custom engine tuning, turbo boost upgrades, and gearbox TCM flashes for aggressive throttle response.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹65,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('ECU Remapping & Dyno Tuning', 65000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-cyber-card rounded-3xl border border-cyber-border hover:border-cyber-blue transition-all duration-300 overflow-hidden flex flex-col justify-between group shadow-xl">
+                    <div>
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=600&q=80" alt="Interior Upgrades" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-cyber-card to-transparent"></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Premium Interior Upgrades</h3>
+                            <p class="text-gray-400 text-sm leading-relaxed mb-4">Alcantara flat-bottom steering wheels, Nappa leather bucket seats, carbon dash accents, and customizable ambient lighting.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-cyber-border">
+                            <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Starting From</span>
+                            <span class="text-xl font-black text-cyber-blue">₹1,20,000</span>
+                        </div>
+                        <button onclick="selectServiceForBooking('Premium Interior Upgrades', 120000)" class="w-full py-3 rounded-2xl bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all">
+                            Book This Mod
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Gallery Section -->
+    <section id="gallery" class="py-24 bg-cyber-dark relative border-t border-cyber-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+                <span class="px-3.5 py-1.5 rounded-full bg-cyber-red/20 text-cyber-red border border-cyber-red/30 text-xs font-bold uppercase tracking-widest">Banglore Portfolio</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">Recent Custom Builds</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Explore high-performance sports cars and luxury SUVs modified in Jaffar Bhai's Indiranagar workshop.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="gallery-tabs">
+                <button data-filter="all" class="filter-btn px-6 py-2.5 rounded-full text-sm font-bold bg-cyber-red text-white cyber-glow-red transition-all">All Builds</button>
+                <button data-filter="alloys" class="filter-btn px-6 py-2.5 rounded-full text-sm font-bold bg-cyber-card text-gray-300 border border-cyber-border hover:border-cyber-blue transition-all">Alloys & Stance</button>
+                <button data-filter="wraps" class="filter-btn px-6 py-2.5 rounded-full text-sm font-bold bg-cyber-card text-gray-300 border border-cyber-border hover:border-cyber-blue transition-all">Paint & Wraps</button>
+                <button data-filter="exhausts" class="filter-btn px-6 py-2.5 rounded-full text-sm font-bold bg-cyber-card text-gray-300 border border-cyber-border hover:border-cyber-blue transition-all">Exhausts & Aero</button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="alloys" onclick="openModal('Matte Black Forged GT3', 'Equipped with custom 21-inch split-spoke forged alloy wheels, lowered suspension geometry, and stage 2 brake rotors at our Banglore studio.', 'https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=800&q=80" alt="Forged Wheels GT3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-blue uppercase tracking-wider">Alloys & Stance</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Matte Black Forged GT3</h3>
+                        <p class="text-xs text-gray-400 mt-2">Custom 21-inch concave forged wheels with coilover fitment.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="wraps" onclick="openModal('Cyber Red Metallic Supra', 'Full stealth metallic red color-shift wrap with ceramic clear coat and carbon fiber mirror caps executed in Indiranagar.', 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=800&q=80" alt="Cyber Red Supra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-red uppercase tracking-wider">Paint & Wraps</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Cyber Red Metallic Supra</h3>
+                        <p class="text-xs text-gray-400 mt-2">Custom color-shift metallic wrap with ceramic protection.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="exhausts" onclick="openModal('Titanium Exhaust Mustang', 'Quad-tip valvetronic titanium exhaust system paired with an adjustable carbon fiber GT wing for aggressive acoustics.', 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=800&q=80" alt="Titanium Exhaust" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-blue uppercase tracking-wider">Exhausts & Aero</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Titanium Exhaust Mustang</h3>
+                        <p class="text-xs text-gray-400 mt-2">Valvetronic exhaust and carbon fiber wing setup.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="alloys" onclick="openModal('Brushed Bronze Monoblock Audi', 'Lightweight monoblock wheels matched with aggressive fender flares and Michelin track tires.', 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&w=800&q=80" alt="Bronze Monoblock Audi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-blue uppercase tracking-wider">Alloys & Stance</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Brushed Bronze Monoblock Audi</h3>
+                        <p class="text-xs text-gray-400 mt-2">Flow-formed bronze wheels engineered for high-speed stability.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="wraps" onclick="openModal('Electric Blue Porsche', 'Satin electric blue vinyl wrap combined with gloss black roof and custom ceramic window tint.', 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=800&q=80" alt="Electric Blue Porsche" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-red uppercase tracking-wider">Paint & Wraps</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Electric Blue Porsche</h3>
+                        <p class="text-xs text-gray-400 mt-2">Premium electric satin finish wrap with black accent details.</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item group relative overflow-hidden rounded-3xl bg-cyber-card border border-cyber-border shadow-2xl cursor-pointer" data-category="exhausts" onclick="openModal('Carbon Aero Widebody BMW', 'Complete carbon fiber widebody kit with aggressive front splitter, rear diffuser, and stage 3 tune.', 'https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80')">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80" alt="Carbon Aero BMW" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyber-card via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-cyber-blue uppercase tracking-wider">Exhausts & Aero</span>
+                        <h3 class="text-xl font-bold text-white mt-1">Carbon Aero Widebody BMW</h3>
+                        <p class="text-xs text-gray-400 mt-2">Full carbon splitter and diffuser package with ECU remap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal Preview -->
+    <div id="gallery-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden px-4">
+        <div class="bg-cyber-card rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-cyber-border">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-cyber-dark text-gray-300 hover:text-cyber-red flex items-center justify-center transition-colors border border-cyber-border">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="modal-content" class="space-y-4">
+                <img id="modal-img" src="" alt="Project Preview" class="w-full h-56 object-cover rounded-2xl mb-4 border border-cyber-border">
+                <h3 id="modal-title" class="text-2xl font-bold text-white"></h3>
+                <p id="modal-desc" class="text-gray-300 text-sm leading-relaxed"></p>
+                <div class="pt-4 flex justify-end">
+                    <button onclick="closeModal()" class="px-6 py-2.5 rounded-full bg-cyber-red text-white font-bold text-sm cyber-glow-red hover:bg-cyber-redDark transition-colors">Close Preview</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="py-24 bg-cyber-black relative border-t border-cyber-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="px-3.5 py-1.5 rounded-full bg-cyber-blue/20 text-cyber-blue border border-cyber-blue/30 text-xs font-bold uppercase tracking-widest">Banglore Booking</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-white">Schedule Your Modification Slot</h2>
+                <p class="text-gray-300 text-base sm:text-lg">Select your modification package, view live INR pricing, and book your direct consultation with Jaffar Bhai.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <div class="lg:col-span-5 space-y-8 bg-cyber-card p-8 sm:p-10 rounded-3xl border border-cyber-border shadow-2xl">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-1">K1 Customs Banglore HQ</h3>
+                        <p class="text-cyber-red font-semibold text-xs tracking-wider uppercase mb-2">Proprietor: Jaffar Bhai</p>
+                        <p class="text-gray-400 text-sm">Visit our dyno bay and customization studio in Namma Bengaluru.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cyber-dark text-cyber-red flex items-center justify-center shrink-0 text-lg border border-cyber-border">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Workshop Address</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">100ft Road, Indiranagar (Near CMH Road)<br>Banglore, Karnataka - 560038</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cyber-dark text-cyber-blue flex items-center justify-center shrink-0 text-lg border border-cyber-border">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Direct Contact & Email</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">jaffar@k1customs.com<br>support@k1customs.in</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 rounded-2xl bg-cyber-dark text-cyber-red flex items-center justify-center shrink-0 text-lg border border-cyber-border">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Studio Hotline</h4>
+                                <p class="text-xs text-gray-400 mt-0.5">+91 (080) 4567-K1C / +91 98844 K1CUS<br>Mon - Sat: 10:00 AM - 8:00 PM IST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-cyber-dark border border-cyber-border space-y-2">
+                        <span class="text-xs font-bold text-cyber-blue uppercase tracking-wider">Live INR Estimate Summary</span>
+                        <div class="flex justify-between items-center">
+                            <span id="selected-service-name" class="text-sm font-semibold text-gray-200">Forged Alloy Wheels & Stance</span>
+                            <span id="selected-service-price" class="text-2xl font-black text-cyber-red">₹1,45,000</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">Includes professional installation, balancing, and Banglore warranty.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-cyber-card p-8 sm:p-10 rounded-3xl border border-cyber-border shadow-2xl relative">
+                    <div id="booking-success" class="hidden absolute inset-0 bg-cyber-card/95 backdrop-blur-md rounded-3xl z-20 flex flex-col items-center justify-center text-center p-8 space-y-4 border border-cyber-border">
+                        <div class="w-16 h-16 rounded-full bg-cyber-red/20 text-cyber-red flex items-center justify-center text-3xl animate-bounce border border-cyber-red/30">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Banglore Slot Booked Successfully!</h3>
+                        <p class="text-gray-300 text-sm max-w-sm">We have reserved your appointment. Jaffar Bhai and our senior tuning team will call you shortly to discuss your build specs.</p>
+                        <button onclick="resetBookingForm()" class="px-6 py-2.5 rounded-full bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-colors">Book Another Mod</button>
+                    </div>
+
+                    <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Full Name</label>
+                                <input type="text" id="client-name" required class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors" placeholder="Rahul Sharma">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Phone Number (+91)</label>
+                                <input type="tel" id="client-phone" required class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors" placeholder="98765 43210">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Vehicle Make & Model</label>
+                                <input type="text" id="client-car" required class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors" placeholder="BMW M340i / Audi RS5">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Preferred Date</label>
+                                <input type="date" id="client-date" required class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Select Modification Package</label>
+                            <select id="booking-service-select" onchange="updateSelectedServiceFromDropdown(this)" class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors">
+                                <option value="Forged Alloy Wheels & Stance" data-price="145000">Forged Alloy Wheels & Stance - ₹1,45,000</option>
+                                <option value="Custom Paint & Color PPF" data-price="280000">Custom Paint & Color PPF - ₹2,80,000</option>
+                                <option value="Valvetronic Exhaust Systems" data-price="175000">Valvetronic Exhaust Systems - ₹1,75,000</option>
+                                <option value="Carbon Fiber Splitters & Aero" data-price="95000">Carbon Fiber Splitters & Aero - ₹95,000</option>
+                                <option value="ECU Remapping & Dyno Tuning" data-price="65000">ECU Remapping & Dyno Tuning - ₹65,000</option>
+                                <option value="Premium Interior Upgrades" data-price="120000">Premium Interior Upgrades - ₹1,20,000</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-300 uppercase tracking-wider mb-2">Custom Requirements / Notes for Jaffar Bhai</label>
+                            <textarea id="client-notes" rows="3" class="w-full px-4 py-3 rounded-xl bg-cyber-dark border border-cyber-border focus:border-cyber-blue focus:bg-cyber-card focus:outline-none text-sm text-white transition-colors resize-none" placeholder="Specify offset preferences, exhaust valve type, color codes, custom build notes..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 rounded-full bg-cyber-red hover:bg-cyber-redDark text-white font-bold text-sm cyber-glow-red transition-all flex items-center justify-center space-x-2">
+                            <span>Confirm Banglore Appointment</span>
+                            <i class="fa-solid fa-calendar-check text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-cyber-dark border-t border-cyber-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-cyber-red flex items-center justify-center text-white cyber-glow-red">
+                    <i class="fa-solid fa-gauge-high text-sm"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black text-white tracking-wider">K1 <span class="text-cyber-red">CUSTOMS</span></span>
+                    <span class="block text-[11px] text-gray-400 font-medium">Owner: Jaffar Bhai</span>
+                </div>
+            </div>
+            <p class="text-xs text-gray-400 text-center font-medium">
+                &copy; 2026 K1 Customs Banglore Inc. Owned & Operated by Jaffar Bhai. All rights reserved.
+            </p>
+            <div class="flex space-x-6 text-xs text-gray-400 font-medium">
+                <a href="#home" class="hover:text-cyber-blue transition-colors">Privacy Policy</a>
+                <a href="#home" class="hover:text-cyber-blue transition-colors">Terms of Service</a>
+                <a href="#home" class="hover:text-cyber-blue transition-colors">Banglore Warranty</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 40) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-cyber-red', 'text-white', 'cyber-glow-red');
+                    b.classList.add('bg-cyber-card', 'text-gray-300', 'border', 'border-cyber-border');
+                });
+                btn.classList.remove('bg-cyber-card', 'text-gray-300', 'border', 'border-cyber-border');
+                btn.classList.add('bg-cyber-red', 'text-white', 'cyber-glow-red');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function openModal(title, desc, imgSrc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('gallery-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('gallery-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('gallery-modal');
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function selectServiceForBooking(serviceName, price) {
+            const selectEl = document.getElementById('booking-service-select');
+            for (let i = 0; i < selectEl.options.length; i++) {
+                if (selectEl.options[i].value === serviceName) {
+                    selectEl.selectedIndex = i;
+                    break;
+                }
+            }
+            document.getElementById('selected-service-name').innerText = serviceName;
+            document.getElementById('selected-service-price').innerText = '₹' + price.toLocaleString('en-IN');
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function updateSelectedServiceFromDropdown(select) {
+            const selectedOption = select.options[select.selectedIndex];
+            const serviceName = selectedOption.value;
+            const price = parseInt(selectedOption.getAttribute('data-price'));
+
+            document.getElementById('selected-service-name').innerText = serviceName;
+            document.getElementById('selected-service-price').innerText = '₹' + price.toLocaleString('en-IN');
+        }
+
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            document.getElementById('booking-success').classList.remove('hidden');
+        }
+
+        function resetBookingForm() {
+            document.getElementById('booking-form').reset();
+            document.getElementById('booking-success').classList.add('hidden');
+            document.getElementById('selected-service-name').innerText = 'Forged Alloy Wheels & Stance';
+            document.getElementById('selected-service-price').innerText = '₹1,45,000';
+        }
+    </script>
+</body>
+</html>
